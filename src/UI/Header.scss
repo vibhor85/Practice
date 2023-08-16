@@ -1,0 +1,26 @@
+@use "../styles/mixins.scss";
+.Header {
+  background: rgb(69, 69, 97);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  ul {
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 10px;
+    margin: 0 20px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: rgb(59, 59, 82);
+    }
+  }
+  button {
+    @include mixins.logout(#ff4742);
+  }
+}
