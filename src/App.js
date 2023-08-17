@@ -3,12 +3,14 @@ import Header from "./UI/Header";
 import Login from "./components/Login/Login";
 import Profile from "./components/Profile/Profile";
 
+import { useState } from "react";
+
 function App() {
+  const [auth, setAuth] = useState();
   return (
     <div className="App">
       <Header />
-      <Login />
-      <Profile />
+      {!auth ? <Login /> : <Profile />}
     </div>
   );
 }

@@ -6,10 +6,13 @@ const Login = () => {
   const inputEmail = useRef();
   const inputPassword = useRef();
 
-    
-    
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    console.log(inputEmail);
+    console.log(inputEmail.current.value, inputPassword.current.value);
+  };
   return (
-    <form className="form">
+    <form className="form" onSubmit={onSubmitHandler}>
       <div className="form__div">
         <label className="form-label">Login</label>
         <input
