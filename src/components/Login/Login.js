@@ -3,7 +3,7 @@ import "./Login.scss";
 
 import { useContext, useRef, useState } from "react";
 
-const Login = ({ login }) => {
+const Login = () => {
   const inputEmail = useRef();
   const inputPassword = useRef();
   const [isEmailValid, setIsEmailValid] = useState(false);
